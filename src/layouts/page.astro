@@ -1,0 +1,15 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={title || 'Sndwch'}>
+   <section class="block page">
+    <slot />
+   </section>
+</Layout>

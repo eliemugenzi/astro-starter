@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/page.astro';
+---
+
+<Layout title="404 Not found | Sndwch">
+    <div class="not-found">
+        <h1>Page not found(404)</h1>
+        <img 
+        class="not-found-image"
+        src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        alt="An alternative image for a 404 message">
+        <p>Looks like the page you requested does not exist on our website.</p>
+        <p><a href="/">&larr; Go back home</a></p>
+    </div>
+</Layout>
+
+<style>
+
+    .not-found {
+        margin: 0 auto;
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .not-found h1 {
+        font-size: 2rem;
+    }
+
+    .not-found img {
+        display: block;
+        margin: 1rem 0 0;
+        width: 100%;
+    }
+</style>
