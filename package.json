@@ -11,7 +11,18 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
+    "@astrojs/mdx": "^2.1.0",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/solid-js": "^4.0.1",
+    "@nanostores/react": "^0.7.1",
+    "@nanostores/solid": "^0.4.2",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
     "astro": "^4.2.1",
+    "nanostores": "^0.9.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "solid-js": "^1.8.12",
     "typescript": "^5.3.3"
   }
 }

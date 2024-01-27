@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ShopItems from "../components/shop-items.astro";
+import { Cart } from '../components/cart';
 ---
 
 <Layout title="Shop">
@@ -8,13 +10,15 @@ import Layout from "../layouts/Layout.astro";
         <noscript>
             <p>Javascript is required to purchase things from Sndwch web store. To order by phone, call <a href="tel:+250785844487">250-785-844-487</a></p>
         </noscript>
-        <div class="products">
-            <p>TODO: List products</p>
-            <p>TODO: Show cart</p>
-        </div>
+        <ShopItems />
+       <Cart client:only="solid-js" />
     </div>
 </Layout>
 
 <style>
-    
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
 </style>

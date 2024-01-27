@@ -1,0 +1,52 @@
+---
+import { AddToCart } from '../components/add-to-cart';
+import { formatCurrency } from '../helpers/formatCurrency';
+
+const result = await fetch('https://astro-frontend-masters-api.netlify.app/api/products');
+
+if(!result.ok) {
+    console.error(result);
+}
+
+const shopItems: ShopItem[] = await result.json();
+---
+
+<section class="shop-items">
+    {
+        shopItems.map((item)=> {
+            return (
+            <div class="item">
+                    <img src={item.image.src} alt={item.image.alt} />
+                    <h2>{item.title}</h2>
+                    <p>{item.description}</p>
+                    <p class="price">{formatCurrency(item.price)}</p>
+                    <AddToCart item={item} client:only="react" />
+            </div>
+            );
+        })
+    }
+</section>
+
+<style>
+
+    .shop-items {
+        display: flex;
+        justify-content:space-around;
+        flex-direction: row;
+    }
+
+    .shop-items .item {
+        border: 1px solid lightgray;
+        flex-basis: 30%;
+        margin-left: 20px;
+        padding: 1rem;
+    }
+
+    .item img {
+        width: 250px;
+        height: 250px;
+    }
+    .item h2 {
+        font-size: 20px;
+    }
+</style>
